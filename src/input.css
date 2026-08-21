@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@layer base{
+    body{
+        @apply bg-gray-200 dark:bg-gray-900 min-h-screen flex justify-center items-center
+    }
+    h1{
+        @apply capitalize text-3xl font-bold text-gray-800 dark:text-white
+    }
+    h4{
+        @apply capitalize text-sm text-gray-600 dark:text-gray-400
+    }
+}
+
+@layer components{
+    .card-container{
+        @apply dark:bg-gray-800 relative flex flex-col lg:flex-row items-center p-5 space-y-3 lg:space-y-0 lg:space-x-5 bg-white w-fit rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-300 dark:border-gray-600
+    }
+    .card-view{
+        @apply bg-orange-400 lg:bg-pink-400 px-3 py-2 rounded-full font-semibold text-white absolute top-27 right-10 lg:top-23 lg:right-20
+    }
+    .card-image{
+        @apply w-56 h-auto lg:size-24 rounded-md lg:rounded-full hover:scale-105 transition-transform duration-700 ring-2 ring-green-400 lg:ring-blue-400
+    }
+    .card-body{
+        @apply flex flex-col items-center lg:justify-center lg:items-start
+    }
+    .card-actions{
+        @apply flex justify-center lg:flex-col space-x-2 lg:space-x-0 lg:space-y-2 mt-2 lg:mt-0
+    }
+    .update-button{
+        @apply flex items-center bg-green-600 hover:bg-green-700 text-white hover:text-gray-700 px-3 py-2 rounded-md transition-colors duration-500 focus:outline-none focus:ring-2 focus:ring-green-400 active:scale-95 
+    }
+    .delete-button{
+        @apply flex items-center bg-red-600 hover:bg-red-700 text-white hover:text-gray-700 px-3 py-2 rounded-md transition-colors duration-500 focus:outline-none focus:ring-2 focus:ring-red-400 active:scale-95
+    }
+}
